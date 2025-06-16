@@ -1,0 +1,43 @@
+mat-card {
+    margin: auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+.full-width {
+    max-width: 100%;
+}
+img {
+    width: 100%;
+}
+
+.img {
+    flex: 1 1;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.warp {
+    flex-wrap: wrap;
+}
+
+mat-card-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+mat-card-footer {
+    font-weight: bold;
+    color: red;
+}
+
+.mat-mdc-form-field{
+    width: 100%;
+}

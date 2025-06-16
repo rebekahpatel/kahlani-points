@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 150px 0px 0px;
+    color: var(--mat-sys-primary);
 }
 
 .title-header {

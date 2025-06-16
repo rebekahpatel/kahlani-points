@@ -1,0 +1,45 @@
+<form class="LoginCard" [formGroup]="loginForm" (ngSubmit)="Submit()">
+    <div class="tribal-overlay"></div>
+
+    <mat-card class="mat-elevation-z8">
+        <mat-card-content>
+            <div class="img"><img src="/assets/JMC-Splash.jpg" /></div>
+            <div class="flex warp">
+                <mat-form-field>
+                    <mat-label>Userid</mat-label>
+
+                    <input
+                    autofocus
+                        type="text"
+                        matInput
+                        placeholder="Userid"
+                        formControlName="username"
+                        autocomplete="off"
+                    />
+                    <mat-error>Enter Userid</mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input
+                        [type]="hide ? 'password' : 'text'"
+                        matInput placeholder="Your password"
+                        formControlName="password"
+                        autocomplete="off"
+                    />
+                        <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-error>Enter password</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit"
+              mat-raised-button color="primary"
+              [disabled]="loginForm.invalid"
+            >
+              Submit
+            </button>
+        </mat-card-actions>
+        <mat-card-footer>{{ errormsg }}</mat-card-footer>
+    </mat-card>
+</form>
