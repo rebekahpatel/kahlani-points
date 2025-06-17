@@ -1,18 +1,9 @@
 mat-card {
+    height: 400px;
+    width: 450px;
     margin: auto;
-    max-width: 600px;
-    padding: 10px;
-}
-
-.full-width {
-    max-width: 100%;
-}
-img {
-    width: 100%;
-}
-
-.img {
-    flex: 1 1;
+    max-width: 800px;
+    padding: 35px 35px 25px 35px;
 }
 
 .flex {
@@ -20,24 +11,49 @@ img {
     gap: 10px;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
 }
-.warp {
+
+.wrap {
     flex-wrap: wrap;
+}
+
+mat-card-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 mat-card-content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
 }
 
+button {
+    margin-top: 20px;
+}
+
 mat-card-footer {
+    margin-bottom: 0px;
     font-weight: bold;
     color: red;
+    font-size: 15px;
 }
 
 .mat-mdc-form-field{
     width: 100%;
+}
+
+.LoginCard {
+    height: 90.5vh;
+    width: 100vw;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/JMC-Splash.jpg");
 }

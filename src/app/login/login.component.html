@@ -1,34 +1,37 @@
 <form class="LoginCard" [formGroup]="loginForm" (ngSubmit)="Submit()">
     <div class="tribal-overlay"></div>
 
-    <mat-card class="mat-elevation-z8">
+    <mat-card class="mat-elevation-z8" apperance="outlined">
+        <mat-card-header>
+            <mat-card-title>Login with Your Kahlani Account</mat-card-title>
+        </mat-card-header>
         <mat-card-content>
-            <div class="img"><img src="/assets/JMC-Splash.jpg" /></div>
+            <!-- <div class="img"><img src="/assets/JMC-Splash.jpg" /></div> -->
             <div class="flex warp">
                 <mat-form-field>
-                    <mat-label>Userid</mat-label>
+                    <mat-label>Username</mat-label>
 
                     <input
                     autofocus
                         type="text"
                         matInput
-                        placeholder="Userid"
+                        placeholder="Username"
                         formControlName="username"
                         autocomplete="off"
                     />
-                    <mat-error>Enter Userid</mat-error>
+                    <mat-error>Enter Username</mat-error>
                 </mat-form-field>
 
                 <mat-form-field>
                     <mat-label>Password</mat-label>
                     <input
                         [type]="hide ? 'password' : 'text'"
-                        matInput placeholder="Your password"
+                        matInput placeholder="Your Password"
                         formControlName="password"
                         autocomplete="off"
                     />
                         <mat-icon (click)="hide = !hide" matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    <mat-error>Enter password</mat-error>
+                    <mat-error>Enter Password</mat-error>
                 </mat-form-field>
             </div>
         </mat-card-content>

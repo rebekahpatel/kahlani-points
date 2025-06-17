@@ -34,7 +34,8 @@ export class LoginComponent {
   returnUrl!: string;
   hide = true;
 
-  @Input() errormsg?: string;
+  // @Input() errormsg?: string;
+  errormsg = "Please enter your login information"
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -49,4 +50,6 @@ export class LoginComponent {
   Submit() {
     this.onSubmit.emit(this.loginForm.value);
   }
+
+  
 }
